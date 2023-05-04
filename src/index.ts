@@ -33,9 +33,15 @@ function showReviewTotal(value: number, reviewer: string, isLoyalty: boolean) {
 
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 
-const you: { username: string; isReturning: boolean } = {
+const you: {
+  username: string;
+  isReturning: boolean;
+  stayedAt: (string | number)[];
+} = {
   username: "Mutesi",
   isReturning: true,
+
+  stayedAt: ["florida-home", "oman-flat", "tokyo-bungalow", 25],
 };
 
 function populatedUser(userName: string, isReturning: boolean) {
