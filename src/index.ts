@@ -3,7 +3,12 @@ const returningUserDisplay = document.querySelector(
   "#returning-user"
 ) as InnerHTML;
 const displayUser = document.querySelector("#user") as InnerHTML;
-const reviews = [
+const reviews: {
+  name: string;
+  stars: number;
+  loyaltyUser: boolean;
+  date: string;
+}[] = [
   {
     name: "Sheia",
     stars: 5,
