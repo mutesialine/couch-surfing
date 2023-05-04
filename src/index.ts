@@ -1,4 +1,5 @@
-let reviewTotalDisplay = document.querySelector("#reviews");
+const reviewTotalDisplay = document.querySelector("#reviews") as InnerHTML;
+
 const reviews = [
   {
     name: "Sheia",
@@ -21,6 +22,6 @@ const reviews = [
 ];
 
 function showReviewTotal(value: number) {
-  reviewTotalDisplay?.innerHTML = "total review" + value.toString();
+  reviewTotalDisplay.innerHTML = "review total " + value.toString();
 }
 showReviewTotal(reviews.length);
