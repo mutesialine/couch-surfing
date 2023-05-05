@@ -3,7 +3,6 @@ const returningUserDisplay = document.querySelector(
   "#returning-user"
 ) as HTMLElement;
 const displayUser = document.querySelector("#user") as HTMLElement;
-const diplaycard = document.querySelector("#properties") as HTMLElement;
 
 export function showReviewTotal(
   value: number,

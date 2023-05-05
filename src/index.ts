@@ -1,5 +1,5 @@
 import { showReviewTotal, populatedUser } from "./utils";
-const diplaycard = document.querySelector("#properties") as HTMLElement;
+const diplaycard = document.querySelector(".properties") as HTMLElement;
 
 const reviews: {
   name: string;
@@ -32,7 +32,7 @@ const you: {
   isReturning: boolean;
   stayedAt: (string | number)[];
 } = {
-  username: "Ivad",
+  username: "Annah",
   isReturning: true,
 
   stayedAt: ["florida-home", "oman-flat", "tokyo-bungalow", 25],
@@ -52,7 +52,7 @@ const properties: {
   isAvailable: boolean;
 }[] = [
   {
-    image: "images/colombia-property.jpg",
+    image: "/images/colombia.jpg",
     title: "Colombian Shack",
     price: 45,
     location: {
@@ -65,7 +65,7 @@ const properties: {
     isAvailable: true,
   },
   {
-    image: "images/poland-property.jpg",
+    image: "/images/poland.jpg",
     title: "Polish Cottage",
     price: 34,
     location: {
@@ -78,7 +78,7 @@ const properties: {
     isAvailable: false,
   },
   {
-    image: "images/london-property.jpg",
+    image: "/images/london.jpg",
     title: "London Flat",
     price: 23,
     location: {
@@ -98,13 +98,13 @@ populatedUser(you.username, you.isReturning);
 
 for (let i = 0; i < properties.length; i++) {
   const propertyDiv = document.createElement("div");
-  const image = document.createElement("img");
-  image.src = properties[i].image;
-  propertyDiv.appendChild(image);
-
+  propertyDiv.classList.add(".card");
   const title = document.createElement("h2");
   title.textContent = properties[i].title;
   propertyDiv.appendChild(title);
+  const image = document.createElement("img");
+  image.src = properties[i].image;
+  propertyDiv.appendChild(image);
 
   const price = document.createElement("p");
   price.textContent = `Price: ${properties[i].price}`;
@@ -123,6 +123,5 @@ for (let i = 0; i < properties.length; i++) {
     properties[i].isAvailable ? "yes" : "no"
   }`;
   propertyDiv.appendChild(availability);
-
   diplaycard.appendChild(propertyDiv);
 }

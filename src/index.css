@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial;
-  color: darkgrey;
+  color: black;
   flex-direction: column;
   max-width: 1280px;
   margin: 0 auto;
@@ -15,7 +15,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: red;
 }
 
 .nav-bar {
@@ -42,15 +41,19 @@ body {
 
 .properties {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
 }
 
 .card {
-  width: 150px;
+  width: 800px;
   margin: 5px;
   border-radius: 20px;
+  background-color: red;
   padding: 10px;
   box-shadow: rgb(0 0 0 / 12%) 0 1px 8px;
+  font-size: 16px;
 }
 
 .footer {
