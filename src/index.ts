@@ -2,41 +2,48 @@ import { showReviewTotal, populatedUser } from "./utils";
 const diplaycard = document.querySelector(".properties") as HTMLElement;
 const footer = document.querySelector(".footer") as HTMLElement;
 
+enum loyaltyUser {
+  GOLD_USER = "GOLD_USER",
+  SILVER_USER = "SILVER_USER",
+  BRONZE_USER = "BRONZE_USER",
+}
 const reviews: {
   name: string;
   stars: number;
-  loyaltyUser: boolean;
+  loyaltyUser: loyaltyUser;
   date: string;
 }[] = [
   {
     name: "Sheia",
     stars: 5,
-    loyaltyUser: true,
+    loyaltyUser: loyaltyUser.GOLD_USER,
     date: "01-04-2021",
   },
   {
     name: "Andrzej",
     stars: 3,
-    loyaltyUser: false,
+    loyaltyUser: loyaltyUser.BRONZE_USER,
     date: "28-03-2021",
   },
   {
     name: "Omar",
     stars: 4,
-    loyaltyUser: true,
+    loyaltyUser: loyaltyUser.SILVER_USER,
     date: "27-03-2021",
   },
 ];
+const ADMIN = "admin";
+const READ_ONLY = "read_only";
 
-const you: {
-  username: string;
-  isReturning: boolean;
-  stayedAt: (string | number)[];
-} = {
+enum permissions {
+  ADMIN,
+  READ_ONLY,
+}
+const you = {
   username: "Annah",
   isReturning: true,
-
-  stayedAt: ["florida-home", "oman-flat", "tokyo-bungalow", 25],
+  permission: permissions.ADMIN,
+  stayedAt: ["florida-home", "oman-flat", "tokyo-bungalow"],
 };
 
 const properties: {
