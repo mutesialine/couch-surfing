@@ -17,7 +17,7 @@ export function showReviewTotal(
 
 export function populatedUser(userName: string, isReturning: boolean) {
   if (isReturning) {
-    returningUserDisplay.innerHTML = "back again";
+    returningUserDisplay.innerHTML = "back";
   }
   displayUser.innerHTML = userName;
 }

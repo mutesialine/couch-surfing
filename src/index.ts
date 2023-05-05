@@ -1,5 +1,6 @@
 import { showReviewTotal, populatedUser } from "./utils";
 const diplaycard = document.querySelector(".properties") as HTMLElement;
+const footer = document.querySelector(".footer") as HTMLElement;
 
 const reviews: {
   name: string;
@@ -125,3 +126,12 @@ for (let i = 0; i < properties.length; i++) {
   propertyDiv.appendChild(availability);
   diplaycard.appendChild(propertyDiv);
 }
+
+let currentLocation: [string, string, number] = ["Rwanda", "11:35", 23];
+footer.innerHTML =
+  currentLocation[0] +
+  " " +
+  currentLocation[1] +
+  " " +
+  currentLocation[2] +
+  "°";
