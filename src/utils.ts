@@ -11,7 +11,11 @@ export function showReviewTotal(
 ) {
   const iconDisplay = isLoyalty ? "⭐" : "";
   reviewTotalDisplay.innerHTML =
-    "review total" + " " + "" + value.toString() + " " + "last review by" + " ";
+    value.toString() +
+    " review" +
+    makeMultiple(value) +
+    "  last review by" +
+    " ";
   reviewer + iconDisplay;
 }
 
@@ -20,4 +24,10 @@ export function populatedUser(userName: string, isReturning: boolean) {
     returningUserDisplay.innerHTML = "back";
   }
   displayUser.innerHTML = userName;
+}
+
+export function makeMultiple(value: number): string {
+  if (value > 1 || value == 0) {
+    return "s";
+  } else return "";
 }

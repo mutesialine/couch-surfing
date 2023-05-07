@@ -7,12 +7,7 @@ enum loyaltyUser {
   SILVER_USER = "SILVER_USER",
   BRONZE_USER = "BRONZE_USER",
 }
-const reviews: {
-  name: string;
-  stars: number;
-  loyaltyUser: loyaltyUser;
-  date: string;
-}[] = [
+const reviews: any[] = [
   {
     name: "Sheia",
     stars: 5,
@@ -30,6 +25,7 @@ const reviews: {
     stars: 4,
     loyaltyUser: loyaltyUser.SILVER_USER,
     date: "27-03-2021",
+    description: "Great hosts, location was a bit further than said.",
   },
 ];
 const ADMIN = "admin";
